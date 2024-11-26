@@ -2,32 +2,39 @@ import { useState,useEffect } from "react";
 import './Store.css';
 import Pagination from "../Pagination/Pagination"
 import axios from "axios";
+import { Link } from "react-router-dom";
 const Store = () => {
     const [products, setProducts] = useState([]);
-    let [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(8);
+    const [productsPerPage] = useState(12);
     
-    useEffect(()=>{ 
-        axios('https://dummyjson.com/products') 
-        .then(data=>{
-            setProducts(data.data.products)
+    const fetchProducts = async () =>{
+        try {
+            const {data} = await axios.get('https://dummyjson.com/products');
+            const products = await data.products;
+            setProducts(products);
             setError(null);
             setLoading(false); 
-        }).catch(err=>{
+        } catch (error) {
+            console.error("error while fetching data", error);
             setLoading(false);
-            setError(err);
+            setError(error);
             setProducts([]);
-        });
-      }, []) 
-
-      const lastProductsIndex = currentPage * productsPerPage;
-      const firstProductsIndex = lastProductsIndex - productsPerPage;
+        }
         
-      const currentProducts = products.slice(firstProductsIndex, lastProductsIndex);
-      console.log(products);
+    }
+
+    useEffect(()=>{  
+        fetchProducts();
+    }, []) 
+
+    const lastProductsIndex = currentPage * productsPerPage;
+    const firstProductsIndex = lastProductsIndex - productsPerPage;    
+    const currentProducts = products.slice(firstProductsIndex, lastProductsIndex);
+ 
     return (   
             <main className="products-main" id="main">
                 <label style={{display: "block"}} htmlFor="Cat-checklist"><h3 className="mobile-categories"><i className="fa-solid fa-list-check"></i> Filters </h3> </label>
@@ -79,28 +86,28 @@ const Store = () => {
                         {error && <p>Whoops, Something went wrong</p>}
                         {
                             currentProducts.map(product=>
-                                <div className="card" key={product.id}>
-                                    <div className="card-thumbnail">
-                                        <a href="#">
-                                            <img src={product.thumbnail} alt="picture"/>
-                                        </a>
+                                <Link to={`/Products/${product.id}`} key={product.id}>
+                                    <div className="card" >
+                                        <div className="card-thumbnail">
+                                            <a href="#">
+                                                <img src={product.thumbnail} alt="picture"/>
+                                            </a>
+                                        </div>
+                                        <div className="card-body">
+                                            <a href=""><h3>{product.title}</h3></a>
+                                            <p>{product.price}</p>
+                                        </div>                     
                                     </div>
-                                    <div className="card-body">
-                                        <a href=""><h3>{product.title}</h3></a>
-                                        <p>{product.price}</p>
-                                    </div>                     
-                                </div>
+                                </Link>
                             )
-                        } 
-                         
-                          
+                        }  
                     </div>
                     <Pagination  
                         totalProducts = {products.length} 
                         productsPerPage={productsPerPage}
                         setCurrentPage={setCurrentPage}  
                         currentPage = {currentPage}  
-                        />
+                    />
                 </section>
             </main> 
     );
