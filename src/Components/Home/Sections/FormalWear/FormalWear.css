@@ -1,0 +1,62 @@
+#formal-wear{
+    background-image: url("https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    justify-content: space-around; 
+}
+#formal-wear .formal-wear-overlay{
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    gap: 30px;
+}
+#formal-wear button{
+    padding: 15px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #ff6a00;
+    color: white;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#formal-wear h1{
+    color: white;
+    font-size: 100px;
+    text-shadow: 2px 2px 2px black;
+}
+#formal-wear button:hover{
+    background-color: black;
+    
+}
+
+@media screen and (max-width:1267px){
+    #formal-wear h1{
+        color: white;
+        font-size: 80px;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+
+@media screen and (max-width:843px) {
+    #formal-wear h1{
+        color: white;
+        font-size: 50px;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+
+@media screen and (max-width:496px){
+    #formal-wear h1{
+        color: white; 
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+    }  
+}

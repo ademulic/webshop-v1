@@ -1,0 +1,37 @@
+.back-to-top a{
+    text-decoration: none;
+    color: #ff6a00;
+}
+.back-to-top:hover{ 
+    background-color: #ff6a00;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.back-to-top:active{ 
+    background-color: #7c7c7c;
+    color: white;
+    
+}
+.back-to-top{
+    position: fixed;
+    top:calc(100vh - 100px);
+    left: calc(100vw - 150px);
+    padding: 30px 30px;
+    background-color: #ebebeb;
+    display: inline-block;
+    border-radius: 50%; 
+    color: #ff6a00;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
+@media screen and (max-width:496px){
+    .back-to-top{ 
+        left: calc(100vw - 80px);
+        padding: 20px 20px;
+        
+    
+    }
+}

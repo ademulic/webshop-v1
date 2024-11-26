@@ -1,0 +1,84 @@
+.our-brands h1{
+    font-weight: 300;
+    font-size: 50px;
+    
+}
+.our-brands .brand-logos{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 50px;
+    height: 20vh;
+}
+.our-brands .brand-logos .brand-logo{
+    width:8vw;
+}
+.our-brands .brand-logos .brand-logo img{
+    width: 100%;
+}
+
+@media screen and (max-width:1267px){
+    .our-brands{
+        height: unset;
+        gap: 30px;
+        padding: 50px 0;
+    }
+    .our-brands h1{
+        font-weight: 300;
+        font-size: 50px;
+        
+    }
+    .our-brands .brand-logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 25vh; 
+        gap: 50px; 
+    }
+    .our-brands .brand-logos .brand-logo{
+        width:15vw;
+    } 
+    
+}
+
+@media screen and (max-width:843px){
+    .our-brands{
+        height: unset;
+        gap: 30px;
+        padding: 50px 0;
+    }
+    .our-brands h1{
+        font-weight: 300;
+        font-size: 50px;
+        
+    }
+    .our-brands .brand-logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 25vh; 
+        gap: 50px; 
+    }
+    .our-brands .brand-logos .brand-logo{
+        width:18vw;
+    } 
+}
+
+@media screen and (max-width:680px){
+    .our-brands .brand-logos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height:50vh; 
+        gap: 50px; 
+    }
+    .our-brands .brand-logos .brand-logo{
+        width:25vw;
+    } 
+
+}
+
+@media screen and (max-width:496px){ 
+    .our-brands h1{
+        font-weight: 300;
+        font-size:40px;
+        
+    } 
+}

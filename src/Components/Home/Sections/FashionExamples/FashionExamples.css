@@ -1,0 +1,81 @@
+
+#fashion-examples-section{
+    background-color: black;
+    padding:30px;
+}
+#fashion-examples{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    padding-top: 30px;
+    
+}
+#fashion-examples .fashion-example{
+    width: 30vw;
+    height: 480px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+#fashion-examples a{
+    text-decoration: none;
+}
+#fashion-examples-section  h1{
+    color: #ff6a00;
+    font-size: 50px;
+}
+#fashion-examples-section .fashion-example h1{
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.fashion-example-female{
+    background-image: url("https://images.pexels.com/photos/5970787/pexels-photo-5970787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+.fashion-example-children{
+    background-image: url("https://images.pexels.com/photos/5693888/pexels-photo-5693888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+.fashion-example-men{
+    background-image: url("https://images.pexels.com/photos/7011251/pexels-photo-7011251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;   
+}
+
+
+@media screen and (max-width:1267px){
+    #fashion-examples-section h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:843px) {
+    
+    #fashion-examples-section h1{
+        font-size: 30px;
+    }
+    #fashion-examples{
+        display: block;
+        width: 100%;
+    }
+    #fashion-examples .fashion-example{
+        width: 100%;
+    }
+
+
+    
+}
+
+@media screen and (max-width:496px){
+    #fashion-example-section{
+        text-align: center;
+    }
+
+}

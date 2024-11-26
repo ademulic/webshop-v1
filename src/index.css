@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: "Quicksand" ;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.1s ease-in-out;
+}
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+* h1{
+    font-weight: 300;
+} 
+.invisible-div{
+    display: none;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     
+}
+
+/* splash desktop section */
+ 
+.section-header{
+    font-size: 50px;
+    align-self: flex-start;
+    padding-bottom: 30px;
+}
+ 
+/* New collection section */
+ 
+
+ 
+/* Formal wear section */
+
+
+.contact form h1{
+    font-size: 50px;
+    text-align: center;
+}
+.contact{
+    padding: 100px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.contact form label{
+    display: block;
+}
+textarea{
+    min-width: 100%;
+}
+.contact form .email{
+    display: flex;
+    gap: 20px; 
+
+}
+
+
+
+@media screen and (max-width:1267px) { 
+    .cards-container{ 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .product-catalog-banner  .section-header{
+        padding: unset;
+        align-self: center;
+    }
+    .product-catalog{  
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .product-catalog .card{
+        width:200px;
+    }
+ 
+}
+ 
+@media screen and (max-width:843px) {
+    
+    .product-catalog-banner  .section-header h1{
+        padding: 0;
+    }
+     
+    section{
+        height:300vh;
+    }
+    
+    .cards-container .card{
+        width:200px;
+    }
+
+    /* Brand Logos */
+   
+    .product-catalog-banner  .section-header{
+        font-size: 80px;
+    }
+    .product-catalog-section{
+        justify-content: flex-start;
+        height: unset;
+        padding: 10px;
+        align-self: center;
+    }
+    .product-catalog{
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; 
+    }
+    .product-catalog .card{
+        width:200px;
+    }
+    .products-main{
+        flex-direction: column;
+    }
+
+    .products-main .mobile-categories{
+        display: block;
+    }
+
+    .filter-products{
+        position: fixed;
+        min-height: 100vh;
+        background-color: white;
+        width:100vw; 
+        left:-200%;
+        top:0;
+        transition: 0.3s ease-in-out;
+        padding:20px;
+         
+    }
+    .filter-products h3{
+        display: none;
+    } 
+    .mobile-categories{
+        display: flex;
+        gap:20px;
+        padding:5px;
+    }
+    .mobile-categories{
+        font-size: 30px;
+        border: 1px solid lightgrey;
+        padding-right: 25px;
+        border-radius: 0px 50px 50px 0px;
+        transition: 0.3s ease-in-out;
+    }
+    .mobile-categories:hover{
+        background-color: lightgray;
+        color:white;
+    }
+    .mobile-categories:active{
+        background-color: lightgrey;
+    }
+    #Cat-checklist:checked ~ .filter-products{
+        left: 0;
+    }
+    #Cat-checklist-close {
+        margin-top: 80px;
+        display: block; 
+        z-index: 400;
+        padding: 8px 10px ;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 30px;
+        transition: 0.2s ease-in-out;
+    }
+    
+    #Cat-checklist-close:active{
+        background-color: black;
+        color: white;
+    }
+     
+}
+
+@media screen and (max-width:680px){
+   
+    .product-catalog .card{
+        width: 140px;
+    }
+     
+     
+    .product-catalog-banner  .section-header{
+        align-self: center;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:496px){
+   
+    .product-catalog{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .product-catalog .card{
+        width: 140px;
+    }
+    .cards-container .card{
+        width: 150px;
+    }  
+}
+
+.pagination{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagination .active{
+    background-color: #ff6a00;
+    border-radius: 5px;
+    color: white;
+}
+.pagination a{
+    text-decoration: none;
+    padding:10px;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+.pagination a:hover{
+    background-color: #979797;
+    border-radius: 5px;
+    color: white;
+}
+.pagination .pagination-arrows{
+    font-size: 20px;
+}

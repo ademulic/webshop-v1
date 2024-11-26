@@ -1,0 +1,108 @@
+.news-letter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #353535;
+    padding: 20px;
+    
+    gap: 10px;
+}
+.news-letter h1{
+    color: white;
+    font-weight: 300;
+    font-size: 50px;
+}
+.news-letter-form .agreement{
+    display: flex; 
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    color: white;
+}
+.agreement input:checked {
+    background-color: #ff6a00;
+}
+.news-letter-email-input{
+    display: flex;
+    justify-content: center;
+}
+.news-letter-email-input input, .news-letter-email-input button{
+    padding: 15px;
+    border: none;    
+}
+.news-letter-email-input input{
+    outline: none;
+}
+.news-letter-email-input input{
+    width:30vw;
+}
+.news-letter-email-input button{
+    border-radius: 0px 5px 5px 0px;
+    padding: 15px 15px;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.news-letter-email-input button:hover{
+    background-color: black;
+}
+.news-letter-email-input button:active{
+    background-color: #7c7c7c;
+} 
+.news-letter-email-input{
+    display: flex;
+    justify-content: center;
+}
+.news-letter-email-input input, .news-letter-email-input button{
+    padding: 15px;
+    border: none;    
+}
+.news-letter-email-input input{
+    outline: none;
+}
+.news-letter-email-input input{
+    width:30vw;
+}
+.news-letter-email-input button{
+    border-radius: 0px 5px 5px 0px;
+    padding: 15px 15px;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.news-letter-email-input button:hover{
+    background-color: black;
+}
+.news-letter-email-input button:active{
+    background-color: #7c7c7c;
+}
+
+@media screen and (max-width:1267px) {
+    .news-letter-email-input input{
+        width:30vw;
+    } 
+}
+
+@media screen and (max-width:843px){
+    .news-letter-email-input input{
+        width:50vw;
+    }
+}
+@media screen and (max-width:680px){
+    .news-letter-email-input input{
+        width:50vw;
+    }
+}
+@media screen and (max-width:496px){
+    .news-letter h1{
+        font-size: 30px;
+    }
+    .news-letter-email-input input{
+        width:70vw;
+    }
+}
